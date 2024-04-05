@@ -80,9 +80,10 @@ The service should return a JSON response detailing the analyzed tech stack of t
 
 ```json
 {
+  "build_tools": ["Webpack"],
+  "dependency_manager": "npm",
   "languages": ["JavaScript"],
   "framework": "Express",
-  "runtime": "Node.js",
   "dockerised": true
 }
 ```
