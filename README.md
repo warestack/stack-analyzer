@@ -98,6 +98,24 @@ To run the unit tests (included within `tests`), you can use the following comma
 python -m unittest discover tests
 ```
 
+### Importing as a library
+
+In case you want to use the analyzer in your python project you could install it via pip.
+
+```bash
+pip install stack_analyzer
+```
+
+Then you could import the analyzer method in your python files as such:
+
+```python
+from stack_analyzer.analyzer import analyze_repository
+
+result = analyze_repository("https://github.com/example/repo")
+print(result)
+
+```
+
 ## Contributing
 
 Feel free to create your own analyzer and submit a PR or look for our "Call For Contribution" `@cfc` comments in the codebase to contribute in extending existing analyzers.
