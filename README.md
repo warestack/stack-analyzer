@@ -90,6 +90,14 @@ The service should return a JSON response detailing the analyzed tech stack of t
 
 Please note, the actual output will vary based on the analyzer logic you've implemented and the repository data simulated in your Flask application.
 
+#### Unit tests
+
+To run the unit tests (included within `tests`), you can use the following command while being at the project root directory:
+
+```bash
+python -m unittest discover tests
+```
+
 ## Contributing
 
 Feel free to create your own analyzer and submit a PR or look for our "Call For Contribution" `@cfc` comments in the codebase to contribute in extending existing analyzers.

@@ -1,4 +1,4 @@
-from utils import fetch_file_from_github, check_file_existence_in_repo
+from utils.github_utils import fetch_file_from_github, check_file_existence_in_repo
 import json
 
 def analyze_php(repo_url):
