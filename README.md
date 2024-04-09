@@ -116,6 +116,15 @@ print(result)
 
 ```
 
+### Updating the library
+
+Once we some changes that we want to publish to PyPI, we can build a new library version as such:
+
+```bash
+python setup.py sdist bdist_wheel # build a new version
+twine upload dist/* # publish to PyPI
+```
+
 ## Contributing
 
 Feel free to create your own analyzer and submit a PR or look for our "Call For Contribution" `@cfc` comments in the codebase to contribute in extending existing analyzers.
