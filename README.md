@@ -90,6 +90,41 @@ The service should return a JSON response detailing the analyzed tech stack of t
 
 Please note, the actual output will vary based on the analyzer logic you've implemented and the repository data simulated in your Flask application.
 
+#### Unit tests
+
+To run the unit tests (included within `tests`), you can use the following command while being at the project root directory:
+
+```bash
+python -m unittest discover tests
+```
+
+### Importing as a library
+
+In case you want to use the analyzer in your python project you could install it via pip.
+
+```bash
+pip install stack_analyzer
+```
+
+Then you could import the analyzer method in your python files as such:
+
+```python
+from stack_analyzer.analyzer import analyze_repository
+
+result = analyze_repository("https://github.com/example/repo")
+print(result)
+
+```
+
+### Updating the library
+
+Once we some changes that we want to publish to PyPI, we can build a new library version as such:
+
+```bash
+python setup.py sdist bdist_wheel # build a new version
+twine upload dist/* # publish to PyPI
+```
+
 ## Contributing
 
 Feel free to create your own analyzer and submit a PR or look for our "Call For Contribution" `@cfc` comments in the codebase to contribute in extending existing analyzers.

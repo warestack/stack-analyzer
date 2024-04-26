@@ -1,4 +1,4 @@
-from utils import fetch_file_from_github, check_file_existence_in_repo
+from utils.github_utils import fetch_file_from_github, check_file_existence_in_repo
 import json
 
 def analyze_node(repo_url):
@@ -19,6 +19,8 @@ def analyze_node(repo_url):
     # dependency manager detection
     if check_file_existence_in_repo(repo_url, 'yarn.lock'):
         analysis_result['dependency_manager'] = 'yarn'
+    if check_file_existence_in_repo(repo_url, 'pnpm-lock.yml'):
+        analysis_result['dependency_manager'] = 'pnpm'
     # npm is the default, no need to check for package-lock.json explicitly
     # @cfc add more dependency manager checks
 
