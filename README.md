@@ -127,4 +127,6 @@ twine upload dist/* # publish to PyPI
 
 ## Contributing
 
-Feel free to create your own analyzer and submit a PR or look for our "Call For Contribution" `@cfc` comments in the codebase to contribute in extending existing analyzers.
+If you consider contributing to the Stack Analyzer, make sure to check out our [Contribution Guide](CONTRIBUTING.md).
+
+You are welcome to create your own analyzer, add a new feature, or look for our "Call For Contribution" `@cfc` comments in the codebase to contribute in extending existing analyzers.

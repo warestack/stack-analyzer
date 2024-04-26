@@ -1,7 +1,7 @@
 # Contributing to Stack Analyzer
 
 Thank you for considering contributing to Stack Analyzer! This guide will help you get started with contributing to
-our project. Whether it's a bug fix, a new feature, or a typo fix, we appreciate all forms of contribution.
+our project. Whether it's a bug fix, a new analyzer, extending an existing functionality, even a typo fix, we appreciate all forms of contribution.
 
 ## Types of Contributions
 
