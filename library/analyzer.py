@@ -1,6 +1,7 @@
 # analyzer.py
 from analyzers.node_analyzer import analyze_node
 from analyzers.php_analyzer import analyze_php
+from analyzers.python_analyzer import analyze_python
 from utils.github_utils import check_file_existence_in_repo
 
 def analyze_repository(repo_url):
@@ -12,8 +13,14 @@ def analyze_repository(repo_url):
     """
     # this structure makes it easier to add more analyzers in the future
     analyzers = {
+        # PHP analyzer
         'composer.json': analyze_php,
-        'package.json': analyze_node,  # Keep this last for the reason mentioned
+        # PYTHON analyzer 
+        'requirements.txt': analyze_python,  
+        'Pipfile': analyze_python, 
+        'pyproject.toml': analyze_python, 
+        # NODE analyzer
+        'package.json': analyze_node, 
     }
     # @cfc detect more kinds of repositories
     
