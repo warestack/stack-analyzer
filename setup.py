@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="stack_analyzer",
-    version="0.1.0",
+    version="0.1.1",
     author="dimeloper",
     author_email="dkiriakakis@gmail.com",
     description="A library to analyze GitHub repositories and determine their tech stack.",
