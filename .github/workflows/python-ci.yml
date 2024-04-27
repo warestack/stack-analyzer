@@ -8,12 +8,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        # Config the virtual env - Python version 3.9 will be used only.
+        python-version: ["3.9"]
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.8" # Specify the Python version.
+          python-version: ${{ matrix.python-version }}
+          architecture: "x64"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
