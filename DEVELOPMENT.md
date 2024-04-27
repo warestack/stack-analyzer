@@ -85,3 +85,12 @@ Or if you want to run a specific unit test you could do so as such:
 ```bash
 python -m unittest tests/test_analyze_node.py
 ```
+
+### Updating the library
+
+Once we some changes that we want to publish to PyPI (or test.PyPi), we can build a new library version as such:
+
+```bash
+python setup.py sdist bdist_wheel # build a new version
+twine upload --repository testpypi dist/* # publish to test PyPI
+```

@@ -75,15 +75,6 @@ Upgrade Python version to the latest one
 Replace the authentication method with a more secure one
 ```
 
-### Updating the library
-
-Once we some changes that we want to publish to PyPI (or test.PyPi), we can build a new library version as such:
-
-```bash
-python setup.py sdist bdist_wheel # build a new version
-twine upload --repository testpypi dist/* # publish to test PyPI
-```
-
 ## Getting Help
 
 If you have any questions or need help contributing to Stack Analyzer, please reach out to the maintainers on our [Discord server](https://discord.com/invite/pqg5sxhx6Y) or by email.
