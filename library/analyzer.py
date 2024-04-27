@@ -1,5 +1,6 @@
 # analyzer.py
 from analyzers.node_analyzer import analyze_node
+from analyzers.java_analyzer import analyze_java
 from analyzers.php_analyzer import analyze_php
 from analyzers.python_analyzer import analyze_python
 from utils.github_utils import check_file_existence_in_repo
@@ -19,6 +20,9 @@ def analyze_repository(repo_url):
         'requirements.txt': analyze_python,  
         'Pipfile': analyze_python, 
         'pyproject.toml': analyze_python, 
+        # JAVA analyzer
+        'pom.xml': analyze_java,
+        'build.gradle': analyze_java,
         # NODE analyzer
         'package.json': analyze_node, 
     }
