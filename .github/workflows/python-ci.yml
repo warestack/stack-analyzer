@@ -37,9 +37,13 @@ jobs:
         run: |
           pipenv install --dev
 
-      - name: Lint with Flake8
+      - name: Run linter
         run: |
-          pipenv run flake8
+          pipenv run lint
+
+      - name: Run formatting check
+        run: |
+          pipenv run format
 
       - name: Run tests
         run: |

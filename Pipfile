@@ -59,7 +59,12 @@ python-dotenv = "*"
 [dev-packages]
 flake8 = "*"
 pytest = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"
 python_full_version = "3.9.6"
+
+[scripts]
+lint = "flake8"
+format = "black . --check"
