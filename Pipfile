@@ -57,6 +57,8 @@ wsproto = "==1.2.0"
 python-dotenv = "*"
 
 [dev-packages]
+flake8 = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.9"
