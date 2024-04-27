@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="stack_analyzer",
     version="0.1.0",
-    author="Warestack",
-    author_email="dimitris.kiriakakis@warestack.com",
+    author="dimeloper",
+    author_email="dkiriakakis@gmail.com",
     description="A library to analyze GitHub repositories and determine their tech stack.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
