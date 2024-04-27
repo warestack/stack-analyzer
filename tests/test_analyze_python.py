@@ -3,13 +3,17 @@ from unittest.mock import patch
 
 from analyzers.python_analyzer import analyze_python
 
+
 class TestPythonAnalyzer(unittest.TestCase):
-    @patch('analyzers.python_analyzer.fetch_file_from_github')
-    @patch('analyzers.python_analyzer.check_file_existence_in_repo')
+    @patch("analyzers.python_analyzer.fetch_file_from_github")
+    @patch("analyzers.python_analyzer.check_file_existence_in_repo")
     def test_analyze_python_django_project(self, mock_check_file, mock_fetch_file):
         # Setup mocks
-        repo_url = 'https://github.com/example/django_project'
-        mock_check_file.side_effect = lambda url, file: file in ['requirements.txt', 'Dockerfile']
+        repo_url = "https://github.com/example/django_project"
+        mock_check_file.side_effect = lambda url, file: file in [
+            "requirements.txt",
+            "Dockerfile",
+        ]
         requirements_content = """
         django==3.1.7
         gunicorn==20.0.4
@@ -18,11 +22,11 @@ class TestPythonAnalyzer(unittest.TestCase):
 
         # Expected result
         expected_result = {
-            'languages': ['Python'],
-            'frameworks': ['Django'],
-            'build_tools': [],
-            'dockerised': True,
-            'dependency_manager': 'pip',
+            "languages": ["Python"],
+            "frameworks": ["Django"],
+            "build_tools": [],
+            "dockerised": True,
+            "dependency_manager": "pip",
         }
 
         # Test
@@ -31,5 +35,6 @@ class TestPythonAnalyzer(unittest.TestCase):
 
     # Additional tests can be added here for other frameworks or configurations
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
