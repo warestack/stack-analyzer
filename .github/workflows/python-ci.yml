@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         # Config the virtual env - Python version 3.9 will be used only.
-        python-version: ["3.9"]
+        python-version: ["3.9.6"]
 
     steps:
       - uses: actions/checkout@v3
